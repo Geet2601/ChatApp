@@ -20,16 +20,20 @@ firebase.initializeApp({
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
+
 function App() {
   const [user] = useAuthState(auth);
+
   return (
     <div className="App">
-      <header></header>
-      <section>{user ? <ChatRoom /> : <SignIn />}</section>
+      <header>
+        <h1>⚛️💬CHATAPP (react and firebase)</h1>
+        {user && <SignOut />} {/* Render SignOut component if user is authenticated */}
+      </header>
+       <section>{user ? <ChatRoom /> : <SignIn />}</section>
     </div>
   );
 }
-
 function SignIn() {
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -40,6 +44,7 @@ function SignIn() {
 }
 
 function SignOut() {
+  
   return auth.currentUser && <button onClick={() => auth.signOut()}>Sign Out</button>;
 }
 
