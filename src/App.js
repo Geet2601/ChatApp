@@ -8,7 +8,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-
+  apiKey: "AIzaSyAC8DzPeniJFMSHYiVDniR1hr5THwfiQnA",
+  authDomain: "chatapp-fde68.firebaseapp.com",
+  projectId: "chatapp-fde68",
+  storageBucket: "chatapp-fde68.appspot.com",
+  messagingSenderId: "627484713822",
+  appId: "1:627484713822:web:8a218f0b4ad571bfd5a5cf",
+  measurementId: "G-8VD5Y44X04"
 });
 
 const auth = firebase.auth();
@@ -34,12 +40,12 @@ function SignIn() {
     auth.signInWithPopup(provider);
   };
 
-  return <button onClick={signInWithGoogle}>Sign In with Google</button>;
+  return <button className='section in' onClick={signInWithGoogle}>Sign In with Google</button>;
 }
 
 function SignOut() {
   
-  return auth.currentUser && <button onClick={() => auth.signOut()}>Sign Out</button>;
+  return auth.currentUser && <button className='out' onClick={() => auth.signOut()}>Sign Out</button>;
 }
 
 function ChatRoom() {
