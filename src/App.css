@@ -1,20 +1,42 @@
-body {
-  background-color: #282c34;
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  
 }
 
-.App {
+/* Body styling */
+body {
+  background-color: #010c18;
+  font-family:monospace; /* Adding a fallback font */
+  
+  
+}
+
+/* App container */
+.App  {
   text-align: center;
   max-width: 728px;
   margin: 0 auto;
+  /* border: 12px;
+  border-color: #c6bea0; */
+  /* border: 3px solid #c6bea0;
+  box-sizing: border-box;
+  border-radius: 12px;
+   */
 }
 
+/* Header */
 .App header {
-  background-color: #181717;
+  background-color: #010c18;
+  margin-top: 12px;
   height: 10vh;
   min-height: 50px;
-  color: white;
+  color: rgb(239, 224, 184);
   position: fixed;
-  width: 100%;
+  width: 69%;
   max-width: 728px;
   top: 0;
   display: flex;
@@ -25,96 +47,112 @@ body {
   box-sizing: border-box;
 }
 
-.App section {
+/* Main section */
+.App  {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+  background-color: rgb(5, 10, 30);
+  padding: 10px;
+  align-items: justify;
+  /* border: 12px;
+  border-color: #c6bea0; */
+}
+section , .in{
+  align-items:center;
 }
 
+/* Chat messages */
 main {
   padding: 10px;
   height: 80vh;
-  margin: 10vh 0 10vh;
+  margin: 10vh 0;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
 }
 
+/* Scrollbar styles */
 main::-webkit-scrollbar {
   width: 0.25rem;
+  
 }
 
 main::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: #00477a;
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #5731c0;
 }
 
+/* Form input and button */
 form {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: rgb(5, 10, 30);
   width: 100%;
   max-width: 728px;
   display: flex;
   font-size: 1.5rem;
+  align-items: center; /* Adjusted alignment */
 }
 
 form button {
-  width: 20%;
-  background-color: rgb(56, 56, 143);
+  width: 17%;
+  background-color: rgb(7, 7, 60);
+  border-radius: 8px;
+  color: white;
+  border-color: #c6bea0;
+  padding: 10px; /* Adjusted padding */
+  cursor: pointer;
+  font-size: 1rem; /* Slightly reduced font size */
 }
-
 
 input {
-  line-height: 1.5;
-  width: 100%;
+  line-height: 2; /* Adjusted line height */
+  width: 78%; /* Adjusted input width */
   font-size: 1.5rem;
-  background: rgb(58, 58, 58);
-  color: white;
+  font-family: monospace;
+  border-radius: 12px;
+  background: rgb(20, 30, 41);
+  color: rgb(255, 231, 179);
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 5px 10px; /* Adjusted padding */
+  margin-right: 15px;
+  margin-left: 6px; /* Added margin */
 }
 
-button {
-  background-color: #282c34; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 1.25rem;
-}
-
+/* Additional styling for disabled button */
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
+/* Styling for specific components or classes */
 
-.sign-in {
-  color: #282c34;
-  background: white;
-  max-width: 400px;
-  margin: 0 auto;
-}
+/* Sign-in container */
+/* .sign-in {
+  width:120px;
+  border-radius: 8px;
+  background-color: rgb(11, 26, 44);
+  border-color:beige;
+  color:#c6bea0;
+  font-size: 1rem;
+  padding: 12px;
+} */
 
-
-
-
-ul, li {
+/* List styles */
+ul,
+li {
   text-align: left;
   list-style: none;
 }
 
+/* Chat message styles */
 p {
   max-width: 500px;
   margin-bottom: 12px;
@@ -125,30 +163,58 @@ p {
   color: white;
   text-align: center;
 }
+.in {
+  width:120px;
+  border-radius: 8px;
+  background-color: rgb(11, 26, 44);
+  border-color:beige;
+  color:#c6bea0;
+  font-size: 1rem;
+  padding: 12px;
+  /* margin-left: 40%; */
+}
+.out {
+  height:39px;
+  width:90px;
+  padding: 6px;
+  font-size: 1rem;
+  margin-right: 20px;
+  border-radius: 8px;
+  background-color: rgb(11, 26, 44);
+  border-color:beige;
+  color:#c6bea0;
+}
 
 .message {
   display: flex;
   align-items: center;
 }
 
-
+/* Sent and received messages */
 .sent {
   flex-direction: row-reverse;
 }
 
 .sent p {
-  color: white;
-  background: #0b93f6;
+  color: rgb(251, 230, 189);
+  background: #325771;
+  font-size: 1.2rem;
   align-self: flex-end;
 }
+
 .received p {
-  background: #e5e5ea;
-  color: black;
+  background: #c6bea0;
+  font-size: 1.2rem;
+  color: rgb(24, 38, 53);
 }
 
+/* Image styling */
 img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
+  color: #c6bea0;
+  font-weight:bolder;
+  font-size:1rem;
 }
