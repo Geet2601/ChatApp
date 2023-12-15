@@ -2,9 +2,6 @@
 
 ChatApp is a web application that facilitates real-time communication between users across the globe. It allows users to connect and chat with others using their Google accounts for authentication.
 
-![chatapp](https://github.com/Geet2601/ChatApp/assets/138841476/75b2b133-5c4b-4502-8f4a-7258e4c06cee)
-![Screenshot 2023-12-12 102625](https://github.com/Geet2601/ChatApp/assets/138841476/b2de7966-49d1-4257-93a6-6ff7ec57ce81)
-
 ## Features
 
 - **Real-time Chat**: Engage in live conversations with people worldwide.
@@ -43,3 +40,9 @@ To run this project locally, follow these steps:
    - You can use Python's built-in HTTP server:
    ```bash
    python -m http.server
+
+# Preview
+![ChatApp001](https://github.com/Geet2601/ChatApp/assets/138841476/aae07f42-f374-4526-a414-45af3c117cd9)
+![ChatAppSignIN](https://github.com/Geet2601/ChatApp/assets/138841476/c11f0f5c-c91c-42ed-b62d-ab3612fd7e60)
+
+
