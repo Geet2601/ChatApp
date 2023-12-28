@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
    ```bash
    python -m http.server
 
-# [Preview](https://chatapp10gt260.netlify.app/)
+# [Preview and Live Demo](https://chatapp10gt260.netlify.app/)
 ![ChatApp001](https://github.com/Geet2601/ChatApp/assets/138841476/aae07f42-f374-4526-a414-45af3c117cd9)
 ![ChatAppSignIN](https://github.com/Geet2601/ChatApp/assets/138841476/c11f0f5c-c91c-42ed-b62d-ab3612fd7e60)
 
